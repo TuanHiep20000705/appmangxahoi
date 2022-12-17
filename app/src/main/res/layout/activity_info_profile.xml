@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipe_refresh_info_profile"
+    tools:context=".ui.activities.InfoProfileActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar_info_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:id="@+id/but_back_info_profile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:background="@null"
+                            android:src="@drawable/ic_back" />
+
+                        <TextView
+                            android:id="@+id/txt_trang_ca_nhan_info_profile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_toRightOf="@+id/but_back_info_profile"
+                            android:text="@string/txt_trang_ca_nhan"
+                            android:textColor="#505050"
+                            android:textSize="19sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </Toolbar>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <ImageView
+                android:id="@+id/img_anh_bia_info_profile"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/appbar_info_profile"
+                android:layout_alignParentStart="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_1" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_avt_user_info_profile"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_alignBottom="@+id/img_anh_bia_info_profile"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/default_avatar" />
+
+            <TextView
+                android:id="@+id/txt_ten_user_info_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_anh_bia_info_profile"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/app_name"
+                android:textColor="#505050"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img_split_info_profile"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@+id/txt_ten_user_info_profile"
+                android:layout_marginTop="10dp"
+                android:background="#ACACAA" />
+
+            <TextView
+                android:id="@+id/txt_thong_tin_info_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_split_info_profile"
+                android:layout_marginStart="10dp"
+                android:text="@string/txt_thong_tin"
+                android:textColor="#505050"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img_mo_ta_info_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_thong_tin_info_profile"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_mo_ta" />
+
+            <TextView
+                android:id="@+id/txt_string_mo_ta_info_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_thong_tin_info_profile"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/img_mo_ta_info_profile"
+                android:text="@string/txt_mota"
+                android:textColor="#505050"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_mo_ta_info_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_thong_tin_info_profile"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/txt_string_mo_ta_info_profile"
+                android:text="@string/app_name"
+                android:textColor="#505050"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img_que_quan_info_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_mo_ta_info_profile"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_address" />
+
+            <TextView
+                android:id="@+id/txt_string_address_info_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_mo_ta_info_profile"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/img_que_quan_info_profile"
+                android:text="@string/txt_address2"
+                android:textColor="#505050"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_address_info_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_mo_ta_info_profile"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/txt_string_address_info_profile"
+                android:text="@string/app_name"
+                android:textColor="#505050"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img_birthday_info_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_que_quan_info_profile"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_birthday" />
+
+            <TextView
+                android:id="@+id/txt_string_birthday_info_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_que_quan_info_profile"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/img_birthday_info_profile"
+                android:text="@string/txt_birthday2"
+                android:textColor="#505050"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_birthday_info_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_que_quan_info_profile"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/txt_string_birthday_info_profile"
+                android:text="@string/app_name"
+                android:textColor="#505050"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img_phone_info_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_birthday_info_profile"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_iphone" />
+
+            <TextView
+                android:id="@+id/txt_string_phone_info_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_birthday_info_profile"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/img_phone_info_profile"
+                android:text="@string/txt_sdt2"
+                android:textColor="#505050"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_phone_info_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_birthday_info_profile"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/txt_string_phone_info_profile"
+                android:text="@string/app_name"
+                android:textColor="#505050"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

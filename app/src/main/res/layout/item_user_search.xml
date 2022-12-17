@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlt_layout_item_search"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_avt_user_search"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/default_avatar" />
+
+    <TextView
+        android:id="@+id/txt_ten_user_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_toRightOf="@+id/img_avt_user_search"
+        android:text="@string/app_name"
+        android:textColor="#505050"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_que_quan_user_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_ten_user_search"
+        android:layout_marginStart="10dp"
+        android:layout_toRightOf="@+id/img_avt_user_search"
+        android:text="Lives in"
+        android:textSize="16sp"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/but_them_ban_be_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_que_quan_user_search"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toRightOf="@+id/img_avt_user_search"
+        android:background="@drawable/custom_but_them_ban_be"
+        android:text="@string/app_name"
+        android:textAllCaps="false"
+        android:textColor="@color/purple_500"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+</RelativeLayout>
