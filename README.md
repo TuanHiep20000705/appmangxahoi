@@ -1,4 +1,4 @@
-### Dự  App Mạng xã hội
+### Dự án App Mạng xã hội
 #### Các công nghệ sử dụng:
 * Sử dụng mô hình MVVM
 * Retrofit
