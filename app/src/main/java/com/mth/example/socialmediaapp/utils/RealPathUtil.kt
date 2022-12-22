@@ -11,6 +11,7 @@ import android.provider.DocumentsContract
 import android.provider.MediaStore
 import androidx.loader.content.CursorLoader
 
+
 object RealPathUtil {
     fun getRealPath(context: Context, fileUri: Uri): String? {
         val realPath: String?
@@ -84,10 +85,28 @@ object RealPathUtil {
                 // TODO handle non-primary volumes
             } else if (isDownloadsDocument(uri)) {
                 val id = DocumentsContract.getDocumentId(uri)
-                val contentUri = ContentUris.withAppendedId(
-                    Uri.parse("content://downloads/public_downloads"), java.lang.Long.valueOf(id)
+                val contentUriPrefixesToTry = arrayOf(
+                    "content://downloads/public_downloads",
+                    "content://downloads/my_downloads",
+                    "content://downloads/all_downloads"
                 )
-                return getDataColumn(context, contentUri, null, null)
+
+                for (contentUriPrefix in contentUriPrefixesToTry) {
+                    val contentUri = ContentUris.withAppendedId(
+                        Uri.parse(contentUriPrefix),
+                        java.lang.Long.valueOf(id)
+                    )
+                    try {
+                        val path = getDataColumn(context, contentUri, null, null)
+                        if (path != null) {
+                            return path
+                        }
+                    } catch (_: Exception) {
+                    }
+                }
+
+
+
             } else if (isMediaDocument(uri)) {
                 val docId = DocumentsContract.getDocumentId(uri)
                 val split = docId.split(":").toTypedArray()
