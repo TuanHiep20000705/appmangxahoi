@@ -12,10 +12,8 @@ import kotlinx.coroutines.Dispatchers
 class CommentViewModel(app: Application) : ViewModel() {
     private val commentRepository: CommentRepository = CommentRepository(app)
     fun getCommentFromApi(idStatusCmt: Int) = liveData(Dispatchers.IO) {
-
         emit(Resource.loading(null))
         try {
-
             emit(Resource.success(commentRepository.getCommentFromApi(idStatusCmt)))
         } catch (e: Exception) {
             emit(Resource.error(null, e.message ?: "error"))
