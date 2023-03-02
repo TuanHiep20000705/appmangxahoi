@@ -15,6 +15,7 @@ class CommentViewModel(app: Application) : ViewModel() {
 
         emit(Resource.loading(null))
         try {
+
             emit(Resource.success(commentRepository.getCommentFromApi(idStatusCmt)))
         } catch (e: Exception) {
             emit(Resource.error(null, e.message ?: "error"))
